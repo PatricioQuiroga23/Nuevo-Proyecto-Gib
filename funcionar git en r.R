@@ -27,4 +27,11 @@ text <- tesseract::ocr("http://jeroen.github.io/images/testocr.png", engine = en
 
 cat(text)
 
+cat(text)
+
+cat(text)
+
+
+
+
 
