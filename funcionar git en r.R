@@ -1,10 +1,13 @@
-y
+
+renv::init()
+
+library(usethis)
 
 usethis::use_git()
 
 install.packages("renv")
 
-##use_git_config(user.name = "PatricioQuiroga23", user.email = "paqt1988@gmail.com")
+use_git_config(user.name = "PatricioQuiroga23", user.email = "paqt1988@gmail.com")
 
 usethis::use_github()
 
