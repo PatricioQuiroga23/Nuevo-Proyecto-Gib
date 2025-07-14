@@ -34,16 +34,29 @@ sector_profile
 grep("Miami", sector_profile)
 
 grep("Nationwide Total", sector_profile)
+
 sector_profile <- sector_profile[grep("Miami", sector_profile):
                                    grep("Nationwide Total", sector_profile)]
 
 head(sector_profile)
 
-library(stringr)
 
 sector_profile <- str_split_fixed(sector_profile, " {2,}", 10)
 
 head(sector_profile)
 
 sector_profile <- data.frame(sector_profile)
+
+names(sector_profile) <- c("sector",
+                           "agent_staffing",
+                           "apprehensions",
+                           "other_than_mexican_apprehensions",
+                           "marijuana_pounds",
+                           "cocaine_pounds",
+                           "accepted_prosecutions",
+                           "assaults",
+                           "rescues",
+                           "deaths")
+
+
 
